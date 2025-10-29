@@ -11,9 +11,13 @@ type LayoutProviderProps = {
 
 export function LayoutProvider({ children, className }: LayoutProviderProps) {
   return (
-    <div className="min-h-screen max-w-2xl mx-auto border font-sans">
-      <header className="flex justify-between items-center p-5 border-b">
-        <Heading level={2} variant="mono">Reclara</Heading>
+    <div className="min-h-screen max-w-2xl mx-auto border-x font-sans absolute inset-0">
+      <header className="flex justify-between items-center p-5 absolute z-10 top-0 max-w-2xl w-full bg-muted/60">
+        <Link href="/" className="cursor-pointer hover:underline">
+          <Heading level={2} variant="mono">
+            Reclara
+          </Heading>
+        </Link>
         <div className="flex justify-between items-center gap-2">
           <Button asChild>
             <Link href={"/auth/sign-up"}>Sign Up</Link>
@@ -22,10 +26,7 @@ export function LayoutProvider({ children, className }: LayoutProviderProps) {
         </div>
       </header>
       <main
-        className={cn(
-          `font-sans max-w-3xl min-h-screen flex items-center justify-center mx-auto`,
-          className
-        )}
+        className={cn(`h-full flex items-center justify-center`, className)}
       >
         {children}
       </main>

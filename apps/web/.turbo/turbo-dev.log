@@ -5,437 +5,346 @@
    - Environments: .env.local
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 703ms
+ [32m[1m✓[22m[39m Ready in 662ms
  [37m[1m○[22m[39m Compiling / ...
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:16:7
-Parsing ecmascript source code failed
-[0m [90m 14 |[39m         [33m<[39m[33mHeading[39m level[33m=[39m{[35m2[39m}[33m>[39m[33mReclara[39m[33m<[39m[33m/[39m[33mHeading[39m[33m>[39m
- [90m 15 |[39m        [33m<[39m
-[31m[1m>[22m[39m[90m 16 |[39m       [33m<[39m[33m/[39m[33mheader[39m[33m>[39m
- [90m    |[39m       [31m[1m^[22m[39m
- [90m 17 |[39m       [33m<[39m[33mmain[39m
- [90m 18 |[39m         className[33m=[39m{cn(
- [90m 19 |[39m           [32m`font-sans max-w-3xl min-h-screen flex items-center justify-center mx-auto`[39m[33m,[39m[0m
-
-Expression expected
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-
-
-./apps/web/src/components/shared/layout.provider.tsx:16:8
-Parsing ecmascript source code failed
-[0m [90m 14 |[39m         [33m<[39m[33mHeading[39m level[33m=[39m{[35m2[39m}[33m>[39m[33mReclara[39m[33m<[39m[33m/[39m[33mHeading[39m[33m>[39m
- [90m 15 |[39m        [33m<[39m
-[31m[1m>[22m[39m[90m 16 |[39m       [33m<[39m[33m/[39m[33mheader[39m[33m>[39m
- [90m    |[39m        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 17 |[39m       [33m<[39m[33mmain[39m
- [90m 18 |[39m         className[33m=[39m{cn(
- [90m 19 |[39m           [32m`font-sans max-w-3xl min-h-screen flex items-center justify-center mx-auto`[39m[33m,[39m[0m
-
-Unterminated regexp literal
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-
- GET / [31m500[39m in 6.0s[2m (compile: 5.9s, render: 105ms)[22m
- [32m[1m✓[22m[39m Compiled in 108ms
- [31m[1m⨯[22m[39m Error: Failed prop type: The prop `href` expects a `string` or `object` in `<Link>`, but got `undefined` instead.
-    at [3mignore-listed frames[23m {
-  digest: [32m'2778453468'[39m
+[dotenv@17.2.3] injecting env (2) from ../../.env.local [2m-- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops[0m
+[2m2025-10-29T14:06:56.857Z[0m [33mWARN[0m [1m[Better Auth]:[0m Social provider twitter is missing clientId or clientSecret
+ GET / [32m200[39m in 6.8s[2m (compile: 6.2s, render: 585ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 335ms[2m (compile: 176ms, render: 159ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`[0m
+ GET / [32m200[39m in 227ms[2m (compile: 119ms, render: 108ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 271ms[2m (compile: 142ms, render: 129ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  override existing env vars with { override: true }[0m
+ GET / [32m200[39m in 242ms[2m (compile: 114ms, render: 128ms)[22m
+ GET / [32m200[39m in 165ms[2m (compile: 5ms, render: 160ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild[0m
+ GET / [32m200[39m in 180ms[2m (compile: 91ms, render: 88ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }[0m
+ GET / [32m200[39m in 175ms[2m (compile: 89ms, render: 86ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  enable debug logging with { debug: true }[0m
+ GET / [32m200[39m in 160ms[2m (compile: 85ms, render: 75ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 142ms[2m (compile: 85ms, render: 57ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com[0m
+ GET / [32m200[39m in 196ms[2m (compile: 94ms, render: 102ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  override existing env vars with { override: true }[0m
+ GET / [32m200[39m in 205ms[2m (compile: 98ms, render: 108ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 114ms[2m (compile: 61ms, render: 52ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 158ms[2m (compile: 87ms, render: 70ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit[0m
+ GET / [32m200[39m in 151ms[2m (compile: 83ms, render: 68ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`[0m
+ GET / [32m200[39m in 161ms[2m (compile: 82ms, render: 79ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  suppress all logs with { quiet: true }[0m
+ GET / [32m200[39m in 190ms[2m (compile: 98ms, render: 92ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  enable debug logging with { debug: true }[0m
+ GET / [32m200[39m in 143ms[2m (compile: 85ms, render: 59ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 166ms[2m (compile: 91ms, render: 75ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`[0m
+ GET / [32m200[39m in 139ms[2m (compile: 84ms, render: 56ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 157ms[2m (compile: 83ms, render: 73ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com[0m
+ GET / [32m200[39m in 136ms[2m (compile: 81ms, render: 55ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 153ms[2m (compile: 83ms, render: 70ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild[0m
+ GET / [32m200[39m in 178ms[2m (compile: 93ms, render: 85ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 177ms[2m (compile: 97ms, render: 80ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 110ms[2m (compile: 57ms, render: 53ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`[0m
+ GET / [32m200[39m in 153ms[2m (compile: 88ms, render: 65ms)[22m
+ GET /auth/sign-in [32m200[39m in 709ms[2m (compile: 549ms, render: 160ms)[22m
+ GET / [32m200[39m in 36ms[2m (compile: 3ms, render: 32ms)[22m
+ [32m[1m✓[22m[39m Compiled in 21ms
+ GET / [32m200[39m in 39ms[2m (compile: 3ms, render: 36ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 131ms[2m (compile: 72ms, render: 59ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  enable debug logging with { debug: true }[0m
+ GET / [32m200[39m in 157ms[2m (compile: 90ms, render: 66ms)[22m
+ GET / [32m200[39m in 29ms[2m (compile: 2ms, render: 27ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }[0m
+ GET / [32m200[39m in 151ms[2m (compile: 92ms, render: 59ms)[22m
+ GET / [32m200[39m in 22ms[2m (compile: 2ms, render: 20ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 155ms[2m (compile: 93ms, render: 62ms)[22m
+ GET / [32m200[39m in 29ms[2m (compile: 1608µs, render: 27ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }[0m
+ GET / [32m200[39m in 140ms[2m (compile: 83ms, render: 57ms)[22m
+ GET / [32m200[39m in 25ms[2m (compile: 1625µs, render: 23ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com[0m
+ GET / [32m200[39m in 164ms[2m (compile: 94ms, render: 70ms)[22m
+ GET / [32m200[39m in 42ms[2m (compile: 3ms, render: 39ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 127ms[2m (compile: 79ms, render: 48ms)[22m
+ GET / [32m200[39m in 25ms[2m (compile: 1818µs, render: 23ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 149ms[2m (compile: 82ms, render: 67ms)[22m
+ GET / [32m200[39m in 37ms[2m (compile: 2ms, render: 35ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  override existing env vars with { override: true }[0m
+ GET / [32m200[39m in 210ms[2m (compile: 117ms, render: 93ms)[22m
+ GET / [32m200[39m in 32ms[2m (compile: 3ms, render: 29ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 144ms[2m (compile: 88ms, render: 55ms)[22m
+ GET / [32m200[39m in 20ms[2m (compile: 1793µs, render: 19ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 120ms[2m (compile: 59ms, render: 62ms)[22m
+ GET / [32m200[39m in 33ms[2m (compile: 3ms, render: 31ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 154ms[2m (compile: 82ms, render: 72ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  override existing env vars with { override: true }[0m
+ GET / [32m200[39m in 165ms[2m (compile: 90ms, render: 75ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 150ms[2m (compile: 84ms, render: 65ms)[22m
+ GET / [32m200[39m in 34ms[2m (compile: 3ms, render: 31ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 148ms[2m (compile: 81ms, render: 66ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 143ms[2m (compile: 87ms, render: 56ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 198ms[2m (compile: 107ms, render: 91ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 168ms[2m (compile: 99ms, render: 69ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild[0m
+ GET / [32m200[39m in 163ms[2m (compile: 84ms, render: 79ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 134ms[2m (compile: 81ms, render: 53ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  write to custom object with { processEnv: myObject }[0m
+ GET / [32m200[39m in 170ms[2m (compile: 91ms, render: 79ms)[22m
+ GET / [32m200[39m in 27ms[2m (compile: 2ms, render: 24ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  enable debug logging with { debug: true }[0m
+ GET / [32m200[39m in 111ms[2m (compile: 61ms, render: 50ms)[22m
+ GET / [32m200[39m in 25ms[2m (compile: 1978µs, render: 23ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  enable debug logging with { debug: true }[0m
+ GET / [32m200[39m in 152ms[2m (compile: 83ms, render: 70ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  enable debug logging with { debug: true }[0m
+ GET / [32m200[39m in 158ms[2m (compile: 83ms, render: 74ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild[0m
+ GET / [32m200[39m in 145ms[2m (compile: 78ms, render: 67ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 165ms[2m (compile: 98ms, render: 67ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 157ms[2m (compile: 82ms, render: 75ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 152ms[2m (compile: 81ms, render: 71ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  override existing env vars with { override: true }[0m
+ GET / [32m200[39m in 178ms[2m (compile: 88ms, render: 90ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 159ms[2m (compile: 86ms, render: 73ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 161ms[2m (compile: 83ms, render: 78ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 179ms[2m (compile: 89ms, render: 89ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit[0m
+ GET / [32m200[39m in 146ms[2m (compile: 82ms, render: 64ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  override existing env vars with { override: true }[0m
+ GET / [32m200[39m in 153ms[2m (compile: 85ms, render: 69ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  write to custom object with { processEnv: myObject }[0m
+ GET / [32m200[39m in 163ms[2m (compile: 89ms, render: 75ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 152ms[2m (compile: 83ms, render: 69ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 130ms[2m (compile: 80ms, render: 50ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 157ms[2m (compile: 84ms, render: 73ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  override existing env vars with { override: true }[0m
+ [31m[1m⨯[22m[39m ReferenceError: lg is not defined
+    at SummaryInput (src/features/summary/components/summary.input.tsx:13:53)
+[0m [90m 11 |[39m         className[33m=[39m[32m"h-16 border-none bg-muted font-mono rounded-none"[39m
+ [90m 12 |[39m       [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 13 |[39m       [33m<[39m[33mButton[39m className[33m=[39m[32m"rounded-none h-full"[39m size[33m=[39m{lg}[33m>[39m[33mStart[39m[33m<[39m[33m/[39m[33mButton[39m[33m>[39m
+ [90m    |[39m                                                     [31m[1m^[22m[39m
+ [90m 14 |[39m     [33m<[39m[33m/[39m[33mform[39m[33m>[39m
+ [90m 15 |[39m   )[33m;[39m
+ [90m 16 |[39m }[0m {
+  digest: [32m'1068020675'[39m
 }
- GET / [31m500[39m in 443ms[2m (compile: 235ms, render: 208ms)[22m
- [32m[1m✓[22m[39m Compiled in 35ms
- GET / [32m200[39m in 163ms[2m (compile: 63ms, render: 100ms)[22m
- GET / [32m200[39m in 85ms[2m (compile: 53ms, render: 32ms)[22m
- GET / [32m200[39m in 107ms[2m (compile: 63ms, render: 43ms)[22m
- GET / [32m200[39m in 129ms[2m (compile: 76ms, render: 53ms)[22m
- [31m[1m⨯[22m[39m ReferenceError: Button is not defined
-    at LayoutProvider (src/components/shared/layout.provider.tsx:15:10)
-[0m [90m 13 |[39m       [33m<[39m[33mheader[39m[33m>[39m
- [90m 14 |[39m         [33m<[39m[33mHeading[39m level[33m=[39m{[35m2[39m}[33m>[39m[33mReclara[39m[33m<[39m[33m/[39m[33mHeading[39m[33m>[39m
-[31m[1m>[22m[39m[90m 15 |[39m         [33m<[39m[33mButton[39m[33m>[39m[33m<[39m[33m/[39m[33mButton[39m[33m>[39m
- [90m    |[39m          [31m[1m^[22m[39m
- [90m 16 |[39m       [33m<[39m[33m/[39m[33mheader[39m[33m>[39m
- [90m 17 |[39m       [33m<[39m[33mmain[39m
- [90m 18 |[39m         className[33m=[39m{cn([0m {
-  digest: [32m'1934280570'[39m
-}
- [31m[1m⨯[22m[39m ReferenceError: Button is not defined
-    at LayoutProvider (src/components/shared/layout.provider.tsx:15:10)
-[0m [90m 13 |[39m       [33m<[39m[33mheader[39m[33m>[39m
- [90m 14 |[39m         [33m<[39m[33mHeading[39m level[33m=[39m{[35m2[39m}[33m>[39m[33mReclara[39m[33m<[39m[33m/[39m[33mHeading[39m[33m>[39m
-[31m[1m>[22m[39m[90m 15 |[39m         [33m<[39m[33mButton[39m[33m>[39m[33m<[39m[33m/[39m[33mButton[39m[33m>[39m
- [90m    |[39m          [31m[1m^[22m[39m
- [90m 16 |[39m       [33m<[39m[33m/[39m[33mheader[39m[33m>[39m
- [90m 17 |[39m       [33m<[39m[33mmain[39m
- [90m 18 |[39m         className[33m=[39m{cn([0m {
-  digest: [32m'1934280570'[39m
-}
- GET / [32m200[39m in 136ms[2m (compile: 48ms, render: 88ms)[22m
- GET / [31m500[39m in 61ms[2m (compile: 4ms, render: 58ms)[22m
- [31m[1m⨯[22m[39m ReferenceError: Button is not defined
-    at LayoutProvider (src/components/shared/layout.provider.tsx:15:12)
-[0m [90m 13 |[39m       [33m<[39m[33mheader[39m[33m>[39m
- [90m 14 |[39m         [33m<[39m[33mHeading[39m level[33m=[39m{[35m2[39m}[33m>[39m[33mReclara[39m[33m<[39m[33m/[39m[33mHeading[39m[33m>[39m
-[31m[1m>[22m[39m[90m 15 |[39m           [33m<[39m[33mButton[39m[33m>[39m[33m<[39m[33m/[39m[33mButton[39m[33m>[39m
- [90m    |[39m            [31m[1m^[22m[39m
- [90m 16 |[39m         [33m<[39m[33m/[39m[33mheader[39m[33m>[39m
- [90m 17 |[39m       [33m<[39m[33mmain[39m
- [90m 18 |[39m         className[33m=[39m{cn([0m {
-  digest: [32m'1934280570'[39m
-}
- GET / [31m500[39m in 180ms[2m (compile: 69ms, render: 111ms)[22m
- [31m[1m⨯[22m[39m ReferenceError: Button is not defined
-    at LayoutProvider (src/components/shared/layout.provider.tsx:15:14)
-[0m [90m 13 |[39m       [33m<[39m[33mheader[39m[33m>[39m
- [90m 14 |[39m         [33m<[39m[33mHeading[39m level[33m=[39m{[35m2[39m}[33m>[39m[33mReclara[39m[33m<[39m[33m/[39m[33mHeading[39m[33m>[39m
-[31m[1m>[22m[39m[90m 15 |[39m             [33m<[39m[33mButton[39m[33m>[39m[33m<[39m[33m/[39m[33mButton[39m[33m>[39m
- [90m    |[39m              [31m[1m^[22m[39m
- [90m 16 |[39m           [33m<[39m[33m/[39m[33mheader[39m[33m>[39m
- [90m 17 |[39m       [33m<[39m[33mmain[39m
- [90m 18 |[39m         className[33m=[39m{cn([0m {
-  digest: [32m'1934280570'[39m
-}
- GET / [31m500[39m in 89ms[2m (compile: 33ms, render: 57ms)[22m
- [31m[1m⨯[22m[39m ReferenceError: Button is not defined
-    at LayoutProvider (src/components/shared/layout.provider.tsx:15:10)
-[0m [90m 13 |[39m       [33m<[39m[33mheader[39m[33m>[39m
- [90m 14 |[39m         [33m<[39m[33mHeading[39m level[33m=[39m{[35m2[39m}[33m>[39m[33mReclara[39m[33m<[39m[33m/[39m[33mHeading[39m[33m>[39m
-[31m[1m>[22m[39m[90m 15 |[39m         [33m<[39m[33mButton[39m[33m>[39m[33m<[39m[33m/[39m[33mButton[39m[33m>[39m
- [90m    |[39m          [31m[1m^[22m[39m
- [90m 16 |[39m       [33m<[39m[33m/[39m[33mheader[39m[33m>[39m
- [90m 17 |[39m       [33m<[39m[33mmain[39m
- [90m 18 |[39m         className[33m=[39m{cn([0m {
-  digest: [32m'1934280570'[39m
-}
- GET / [31m500[39m in 152ms[2m (compile: 62ms, render: 90ms)[22m
- GET / [32m200[39m in 236ms[2m (compile: 110ms, render: 127ms)[22m
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:4:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/compon/ui/button'[39m
-[0m [90m 2 |[39m [36mimport[39m { [33mHeading[39m } [36mfrom[39m [32m"@/components/shared/heading"[39m[33m;[39m
- [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/compon/ui/button"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 5 |[39m
- [90m 6 |[39m type [33mLayoutProviderProps[39m [33m=[39m {
- [90m 7 |[39m   children[33m:[39m [33mReact[39m[33m.[39m[33mReactNode[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/compon/ui/button' inside of [project]/apps/web
-
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:4:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/compon/ui/button'[39m
-[0m [90m 2 |[39m [36mimport[39m { [33mHeading[39m } [36mfrom[39m [32m"@/components/shared/heading"[39m[33m;[39m
- [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/compon/ui/button"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 5 |[39m
- [90m 6 |[39m type [33mLayoutProviderProps[39m [33m=[39m {
- [90m 7 |[39m   children[33m:[39m [33mReact[39m[33m.[39m[33mReactNode[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/compon/ui/button' inside of [project]/apps/web
-
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:4:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/compon/ui/button'[39m
-[0m [90m 2 |[39m [36mimport[39m { [33mHeading[39m } [36mfrom[39m [32m"@/components/shared/heading"[39m[33m;[39m
- [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/compon/ui/button"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 5 |[39m
- [90m 6 |[39m type [33mLayoutProviderProps[39m [33m=[39m {
- [90m 7 |[39m   children[33m:[39m [33mReact[39m[33m.[39m[33mReactNode[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/compon/ui/button' inside of [project]/apps/web
-
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:4:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/compon/ui/button'[39m
-[0m [90m 2 |[39m [36mimport[39m { [33mHeading[39m } [36mfrom[39m [32m"@/components/shared/heading"[39m[33m;[39m
- [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/compon/ui/button"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 5 |[39m
- [90m 6 |[39m type [33mLayoutProviderProps[39m [33m=[39m {
- [90m 7 |[39m   children[33m:[39m [33mReact[39m[33m.[39m[33mReactNode[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/compon/ui/button' inside of [project]/apps/web
-
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:4:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/compon/ui/button'[39m
-[0m [90m 2 |[39m [36mimport[39m { [33mHeading[39m } [36mfrom[39m [32m"@/components/shared/heading"[39m[33m;[39m
- [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/compon/ui/button"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 5 |[39m
- [90m 6 |[39m type [33mLayoutProviderProps[39m [33m=[39m {
- [90m 7 |[39m   children[33m:[39m [33mReact[39m[33m.[39m[33mReactNode[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/compon/ui/button' inside of [project]/apps/web
-
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:4:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/compon/ui/button'[39m
-[0m [90m 2 |[39m [36mimport[39m { [33mHeading[39m } [36mfrom[39m [32m"@/components/shared/heading"[39m[33m;[39m
- [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/compon/ui/button"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 5 |[39m
- [90m 6 |[39m type [33mLayoutProviderProps[39m [33m=[39m {
- [90m 7 |[39m   children[33m:[39m [33mReact[39m[33m.[39m[33mReactNode[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/compon/ui/button' inside of [project]/apps/web
-
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:4:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/compon/ui/button'[39m
-[0m [90m 2 |[39m [36mimport[39m { [33mHeading[39m } [36mfrom[39m [32m"@/components/shared/heading"[39m[33m;[39m
- [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/compon/ui/button"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 5 |[39m
- [90m 6 |[39m type [33mLayoutProviderProps[39m [33m=[39m {
- [90m 7 |[39m   children[33m:[39m [33mReact[39m[33m.[39m[33mReactNode[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/compon/ui/button' inside of [project]/apps/web
-
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:4:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/compon/ui/button'[39m
-[0m [90m 2 |[39m [36mimport[39m { [33mHeading[39m } [36mfrom[39m [32m"@/components/shared/heading"[39m[33m;[39m
- [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/compon/ui/button"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 5 |[39m
- [90m 6 |[39m type [33mLayoutProviderProps[39m [33m=[39m {
- [90m 7 |[39m   children[33m:[39m [33mReact[39m[33m.[39m[33mReactNode[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/compon/ui/button' inside of [project]/apps/web
-
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:4:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/compon/ui/button'[39m
-[0m [90m 2 |[39m [36mimport[39m { [33mHeading[39m } [36mfrom[39m [32m"@/components/shared/heading"[39m[33m;[39m
- [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/compon/ui/button"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 5 |[39m
- [90m 6 |[39m type [33mLayoutProviderProps[39m [33m=[39m {
- [90m 7 |[39m   children[33m:[39m [33mReact[39m[33m.[39m[33mReactNode[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/compon/ui/button' inside of [project]/apps/web
-
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:4:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/compon/ui/button'[39m
-[0m [90m 2 |[39m [36mimport[39m { [33mHeading[39m } [36mfrom[39m [32m"@/components/shared/heading"[39m[33m;[39m
- [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/compon/ui/button"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 5 |[39m
- [90m 6 |[39m type [33mLayoutProviderProps[39m [33m=[39m {
- [90m 7 |[39m   children[33m:[39m [33mReact[39m[33m.[39m[33mReactNode[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/compon/ui/button' inside of [project]/apps/web
-
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:4:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/compon/ui/button'[39m
-[0m [90m 2 |[39m [36mimport[39m { [33mHeading[39m } [36mfrom[39m [32m"@/components/shared/heading"[39m[33m;[39m
- [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/compon/ui/button"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 5 |[39m
- [90m 6 |[39m type [33mLayoutProviderProps[39m [33m=[39m {
- [90m 7 |[39m   children[33m:[39m [33mReact[39m[33m.[39m[33mReactNode[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/compon/ui/button' inside of [project]/apps/web
-
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
- [31m[1m⨯[22m[39m ./apps/web/src/components/shared/layout.provider.tsx:4:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/compon/ui/button'[39m
-[0m [90m 2 |[39m [36mimport[39m { [33mHeading[39m } [36mfrom[39m [32m"@/components/shared/heading"[39m[33m;[39m
- [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mButton[39m } [36mfrom[39m [32m"@/compon/ui/button"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 5 |[39m
- [90m 6 |[39m type [33mLayoutProviderProps[39m [33m=[39m {
- [90m 7 |[39m   children[33m:[39m [33mReact[39m[33m.[39m[33mReactNode[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/compon/ui/button' inside of [project]/apps/web
-
-
-Import trace:
-  Server Component:
-    ./apps/web/src/components/shared/layout.provider.tsx
-    ./apps/web/src/features/summary/components/summary.page.tsx
-    ./apps/web/src/app/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
- GET / [32m200[39m in 31ms[2m (compile: 4ms, render: 27ms)[22m
- GET / [32m200[39m in 168ms[2m (compile: 107ms, render: 61ms)[22m
- GET / [32m200[39m in 98ms[2m (compile: 62ms, render: 36ms)[22m
- GET / [32m200[39m in 125ms[2m (compile: 78ms, render: 48ms)[22m
- GET / [32m200[39m in 105ms[2m (compile: 66ms, render: 39ms)[22m
- GET / [32m200[39m in 91ms[2m (compile: 52ms, render: 39ms)[22m
- GET / [32m200[39m in 103ms[2m (compile: 64ms, render: 39ms)[22m
- GET / [32m200[39m in 100ms[2m (compile: 62ms, render: 37ms)[22m
- GET / [32m200[39m in 122ms[2m (compile: 73ms, render: 49ms)[22m
- GET / [32m200[39m in 114ms[2m (compile: 64ms, render: 50ms)[22m
- GET / [32m200[39m in 102ms[2m (compile: 62ms, render: 39ms)[22m
- GET / [32m200[39m in 108ms[2m (compile: 62ms, render: 47ms)[22m
- GET / [32m200[39m in 105ms[2m (compile: 62ms, render: 43ms)[22m
- GET / [32m200[39m in 107ms[2m (compile: 63ms, render: 44ms)[22m
- [31m[1m⨯[22m[39m ReferenceError: Theme is not defined
-    at LayoutProvider (src/components/shared/layout.provider.tsx:20:12)
-[0m [90m 18 |[39m             [33m<[39m[33mLink[39m href[33m=[39m{[32m"/auth/sign-up"[39m}[33m>[39m[33mSign[39m [33mUp[39m[33m<[39m[33m/[39m[33mLink[39m[33m>[39m
- [90m 19 |[39m           [33m<[39m[33m/[39m[33mButton[39m[33m>[39m
-[31m[1m>[22m[39m[90m 20 |[39m           [33m<[39m[33mTheme[39m[33m/[39m[33m>[39m
- [90m    |[39m            [31m[1m^[22m[39m
- [90m 21 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
- [90m 22 |[39m       [33m<[39m[33m/[39m[33mheader[39m[33m>[39m
- [90m 23 |[39m       [33m<[39m[33mmain[39m[0m {
-  digest: [32m'4242582160'[39m
-}
- GET / [32m200[39m in 110ms[2m (compile: 66ms, render: 44ms)[22m
- [32m[1m✓[22m[39m Compiled in 350ms
- GET / [32m200[39m in 223ms[2m (compile: 80ms, render: 143ms)[22m
- [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
- GET / [32m200[39m in 124ms[2m (compile: 71ms, render: 53ms)[22m
- GET / [32m200[39m in 125ms[2m (compile: 72ms, render: 53ms)[22m
- GET / [32m200[39m in 122ms[2m (compile: 67ms, render: 55ms)[22m
- GET / [32m200[39m in 91ms[2m (compile: 55ms, render: 36ms)[22m
- GET / [32m200[39m in 102ms[2m (compile: 61ms, render: 41ms)[22m
- GET / [32m200[39m in 93ms[2m (compile: 61ms, render: 32ms)[22m
- GET / [32m200[39m in 102ms[2m (compile: 67ms, render: 36ms)[22m
- GET / [32m200[39m in 92ms[2m (compile: 60ms, render: 33ms)[22m
- GET / [32m200[39m in 89ms[2m (compile: 55ms, render: 34ms)[22m
- GET / [32m200[39m in 116ms[2m (compile: 68ms, render: 48ms)[22m
- [32m[1m✓[22m[39m Compiled in 58ms
- [32m[1m✓[22m[39m Compiled in 42ms
- [32m[1m✓[22m[39m Compiled in 31ms
- [32m[1m✓[22m[39m Compiled in 31ms
- [32m[1m✓[22m[39m Compiled in 30ms
- [32m[1m✓[22m[39m Compiled in 27ms
- [32m[1m✓[22m[39m Compiled in 45ms
- [32m[1m✓[22m[39m Compiled in 27ms
- [32m[1m✓[22m[39m Compiled in 28ms
- [32m[1m✓[22m[39m Compiled in 29ms
- [32m[1m✓[22m[39m Compiled in 34ms
- [32m[1m✓[22m[39m Compiled in 31ms
- [32m[1m✓[22m[39m Compiled in 25ms
- [32m[1m✓[22m[39m Compiled in 27ms
- [32m[1m✓[22m[39m Compiled in 26ms
- [32m[1m✓[22m[39m Compiled in 23ms
- [32m[1m✓[22m[39m Compiled in 27ms
+ GET / [32m200[39m in 119ms[2m (compile: 62ms, render: 57ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 272ms[2m (compile: 94ms, render: 178ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 131ms[2m (compile: 69ms, render: 62ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 161ms[2m (compile: 82ms, render: 79ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 152ms[2m (compile: 82ms, render: 70ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`[0m
+ GET / [32m200[39m in 146ms[2m (compile: 80ms, render: 66ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  override existing env vars with { override: true }[0m
+ GET / [32m200[39m in 127ms[2m (compile: 76ms, render: 51ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 166ms[2m (compile: 86ms, render: 79ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  write to custom object with { processEnv: myObject }[0m
+ GET / [32m200[39m in 154ms[2m (compile: 83ms, render: 71ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 172ms[2m (compile: 86ms, render: 85ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 159ms[2m (compile: 83ms, render: 77ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com[0m
+ GET / [32m200[39m in 160ms[2m (compile: 85ms, render: 75ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 161ms[2m (compile: 84ms, render: 77ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`[0m
+ GET / [32m200[39m in 153ms[2m (compile: 83ms, render: 70ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit[0m
+ GET / [32m200[39m in 135ms[2m (compile: 83ms, render: 52ms)[22m
+ GET / [32m200[39m in 21ms[2m (compile: 1607µs, render: 19ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com[0m
+ GET / [32m200[39m in 163ms[2m (compile: 88ms, render: 75ms)[22m
+ GET / [32m200[39m in 26ms[2m (compile: 2ms, render: 24ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 163ms[2m (compile: 89ms, render: 74ms)[22m
+ GET / [32m200[39m in 19ms[2m (compile: 1898µs, render: 17ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }[0m
+ GET / [32m200[39m in 147ms[2m (compile: 83ms, render: 63ms)[22m
+ GET / [32m200[39m in 23ms[2m (compile: 1817µs, render: 21ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 129ms[2m (compile: 61ms, render: 68ms)[22m
+ GET / [32m200[39m in 31ms[2m (compile: 2ms, render: 28ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com[0m
+ GET / [32m200[39m in 112ms[2m (compile: 59ms, render: 53ms)[22m
+ GET / [32m200[39m in 26ms[2m (compile: 1641µs, render: 25ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 159ms[2m (compile: 83ms, render: 76ms)[22m
+ GET / [32m200[39m in 38ms[2m (compile: 2ms, render: 36ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 160ms[2m (compile: 88ms, render: 72ms)[22m
+ GET / [32m200[39m in 35ms[2m (compile: 1984µs, render: 33ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  write to custom object with { processEnv: myObject }[0m
+ GET / [32m200[39m in 154ms[2m (compile: 83ms, render: 71ms)[22m
+ GET / [32m200[39m in 36ms[2m (compile: 2ms, render: 34ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  suppress all logs with { quiet: true }[0m
+ GET / [32m200[39m in 154ms[2m (compile: 85ms, render: 68ms)[22m
+ GET / [32m200[39m in 38ms[2m (compile: 2ms, render: 36ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 155ms[2m (compile: 85ms, render: 71ms)[22m
+ GET / [32m200[39m in 38ms[2m (compile: 2ms, render: 36ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com[0m
+ GET / [32m200[39m in 157ms[2m (compile: 86ms, render: 71ms)[22m
+ GET / [32m200[39m in 40ms[2m (compile: 2ms, render: 38ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 214ms[2m (compile: 122ms, render: 92ms)[22m
+ GET / [32m200[39m in 38ms[2m (compile: 3ms, render: 36ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 175ms[2m (compile: 96ms, render: 78ms)[22m
+Invalid DOM property `frameborder`. Did you mean `frameBorder`?
+Invalid DOM property `referrerpolicy`. Did you mean `referrerPolicy`?
+Invalid DOM property `allowfullscreen`. Did you mean `allowFullScreen`?
+ GET / [32m200[39m in 154ms[2m (compile: 2ms, render: 152ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 115ms[2m (compile: 63ms, render: 53ms)[22m
+<frameBorder /> is using incorrect casing. Use PascalCase for React components, or lowercase for HTML elements.
+ GET / [32m200[39m in 143ms[2m (compile: 3ms, render: 140ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit[0m
+ GET / [32m200[39m in 121ms[2m (compile: 70ms, render: 50ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 129ms[2m (compile: 65ms, render: 64ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 171ms[2m (compile: 98ms, render: 73ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 159ms[2m (compile: 79ms, render: 80ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 149ms[2m (compile: 90ms, render: 58ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit[0m
+ GET / [32m200[39m in 126ms[2m (compile: 61ms, render: 65ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 162ms[2m (compile: 88ms, render: 74ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`[0m
+ GET / [32m200[39m in 160ms[2m (compile: 88ms, render: 73ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }[0m
+ GET / [32m200[39m in 160ms[2m (compile: 89ms, render: 71ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 183ms[2m (compile: 104ms, render: 80ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 178ms[2m (compile: 102ms, render: 76ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 129ms[2m (compile: 66ms, render: 63ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 163ms[2m (compile: 90ms, render: 74ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit[0m
+ GET / [32m200[39m in 179ms[2m (compile: 94ms, render: 85ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`[0m
+ GET / [32m200[39m in 252ms[2m (compile: 146ms, render: 106ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 147ms[2m (compile: 85ms, render: 63ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit[0m
+ GET / [32m200[39m in 135ms[2m (compile: 69ms, render: 66ms)[22m
+ GET / [32m200[39m in 139ms[2m (compile: 1946µs, render: 137ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit[0m
+ GET / [32m200[39m in 129ms[2m (compile: 73ms, render: 56ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit[0m
+ GET / [32m200[39m in 132ms[2m (compile: 70ms, render: 62ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 126ms[2m (compile: 68ms, render: 58ms)[22m
+React does not recognize the `allowTransparency` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `allowtransparency` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+ GET / [32m200[39m in 155ms[2m (compile: 2ms, render: 153ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }[0m
+ GET / [32m200[39m in 130ms[2m (compile: 71ms, render: 59ms)[22m
+Received `true` for a non-boolean attribute `allowtransparency`.
+
+If you want to write it to the DOM, pass a string instead: allowtransparency="true" or allowtransparency={value.toString()}.
+ GET / [32m200[39m in 106ms[2m (compile: 2ms, render: 104ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 140ms[2m (compile: 63ms, render: 77ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }[0m
+ GET / [32m200[39m in 137ms[2m (compile: 71ms, render: 66ms)[22m
+ GET / [32m200[39m in 143ms[2m (compile: 2ms, render: 141ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }[0m
+ GET / [32m200[39m in 183ms[2m (compile: 105ms, render: 78ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 177ms[2m (compile: 89ms, render: 89ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 160ms[2m (compile: 86ms, render: 74ms)[22m
+ GET / [32m200[39m in 134ms[2m (compile: 2ms, render: 132ms)[22m
+ GET / [32m200[39m in 68ms[2m (compile: 2ms, render: 66ms)[22m
+ GET / [32m200[39m in 39ms[2m (compile: 3ms, render: 36ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 192ms[2m (compile: 131ms, render: 61ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  override existing env vars with { override: true }[0m
+ GET / [32m200[39m in 151ms[2m (compile: 90ms, render: 61ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 175ms[2m (compile: 89ms, render: 86ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com[0m
+ GET / [32m200[39m in 170ms[2m (compile: 87ms, render: 82ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com[0m
+ GET / [32m200[39m in 162ms[2m (compile: 86ms, render: 75ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 171ms[2m (compile: 91ms, render: 80ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`[0m
+ GET / [32m200[39m in 140ms[2m (compile: 69ms, render: 71ms)[22m
+ GET / [32m200[39m in 152ms[2m (compile: 3ms, render: 149ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }[0m
+ GET / [32m200[39m in 213ms[2m (compile: 134ms, render: 79ms)[22m
+ GET / [32m200[39m in 156ms[2m (compile: 2ms, render: 153ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 129ms[2m (compile: 69ms, render: 60ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 155ms[2m (compile: 91ms, render: 64ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 181ms[2m (compile: 91ms, render: 91ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 153ms[2m (compile: 88ms, render: 66ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 127ms[2m (compile: 75ms, render: 52ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit[0m
+ GET / [32m200[39m in 166ms[2m (compile: 85ms, render: 80ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`[0m
+ GET / [32m200[39m in 117ms[2m (compile: 63ms, render: 54ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 📡 add observability to secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 167ms[2m (compile: 96ms, render: 71ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`[0m
+ GET / [32m200[39m in 178ms[2m (compile: 105ms, render: 73ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 222ms[2m (compile: 91ms, render: 131ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 151ms[2m (compile: 85ms, render: 66ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }[0m
+ GET / [32m200[39m in 178ms[2m (compile: 88ms, render: 90ms)[22m
+ GET / [32m200[39m in 34ms[2m (compile: 3ms, render: 31ms)[22m
