@@ -1,0 +1,1 @@
+bunx @better-auth/cli@latest generate --config src/core/auth/client.ts --output src/core/db/schemas/auth.schema.ts

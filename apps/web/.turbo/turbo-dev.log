@@ -1,0 +1,11 @@
+[0m[2m[35m$[0m [2m[1mnext dev[0m
+   [1m[38;2;173;127;168m▲ Next.js 16.0.0[39m[22m (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.18.234:3000
+   - Environments: .env.local
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 830ms
+[dotenv@17.2.3] injecting env (0) from .env.local [2m-- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 2.8s[2m (compile: 2.5s, render: 344ms)[22m
+ GET /auth/sign-in [32m200[39m in 391ms[2m (compile: 334ms, render: 57ms)[22m
