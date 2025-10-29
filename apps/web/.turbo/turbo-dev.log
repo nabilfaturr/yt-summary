@@ -5,7 +5,1008 @@
    - Environments: .env.local
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 830ms
-[dotenv@17.2.3] injecting env (0) from .env.local [2m-- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops[0m
- GET / [32m200[39m in 2.8s[2m (compile: 2.5s, render: 344ms)[22m
- GET /auth/sign-in [32m200[39m in 391ms[2m (compile: 334ms, render: 57ms)[22m
+ [32m[1m✓[22m[39m Ready in 525ms
+[dotenv@17.2.3] injecting env (2) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET / [32m200[39m in 2.9s[2m (compile: 2.3s, render: 532ms)[22m
+ GET /auth/sign-in [32m200[39m in 329ms[2m (compile: 311ms, render: 18ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: ⚙️  suppress all logs with { quiet: true }[0m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+[2m2025-10-29T09:58:42.457Z[0m [31mERROR[0m [1m[Better Auth]:[0m Error Error: Failed query: insert into "verification" ("id", "identifier", "value", "expires_at", "created_at", "updated_at") values (?, ?, ?, ?, ?, ?) returning "id", "identifier", "value", "expires_at", "created_at", "updated_at"
+params: STWR9uolFJvnTJvtJbbkA1eU0DxdyuWs,VgWtJPWW9kdxXpweTbwCnriq-q7B6JzG,{"callbackURL":"/home","codeVerifier":"VJmy1D8xXNzjJCYcztw5TY7oAaLB6TO-asQTc3J5tz26dLBukO1MuMk3SarYa9ouPUOF8jgyr0C7xysrNJ-8QqYDhm0z5HhOowXiM2G0qWgrUCBHsl6_hu6wQOVV-srB","errorURL":"/auth/signin","expiresAt":1761732522022},1761732522022,1761731922022,1761731922022
+    at [3mignore-listed frames[23m {
+  query: [32m'insert into "verification" ("id", "identifier", "value", "expires_at", "created_at", "updated_at") values (?, ?, ?, ?, ?, ?) returning "id", "identifier", "value", "expires_at", "created_at", "updated_at"'[39m,
+  params: [36m[Array][39m,
+  [cause]: Error [LibsqlError]: SQLITE_UNKNOWN: SQLite error: no such table: verification
+      at [3mignore-listed frames[23m {
+    code: [32m'SQLITE_UNKNOWN'[39m,
+    rawCode: [90mundefined[39m,
+    [cause]: [Error [ResponseError]: SQLite error: no such table: verification] {
+      code: [32m'SQLITE_UNKNOWN'[39m,
+      proto: {
+        message: [32m'SQLite error: no such table: verification'[39m,
+        code: [32m'SQLITE_UNKNOWN'[39m
+      }
+    }
+  }
+}
+# SERVER_ERROR:  Error: Failed query: insert into "verification" ("id", "identifier", "value", "expires_at", "created_at", "updated_at") values (?, ?, ?, ?, ?, ?) returning "id", "identifier", "value", "expires_at", "created_at", "updated_at"
+params: STWR9uolFJvnTJvtJbbkA1eU0DxdyuWs,VgWtJPWW9kdxXpweTbwCnriq-q7B6JzG,{"callbackURL":"/home","codeVerifier":"VJmy1D8xXNzjJCYcztw5TY7oAaLB6TO-asQTc3J5tz26dLBukO1MuMk3SarYa9ouPUOF8jgyr0C7xysrNJ-8QqYDhm0z5HhOowXiM2G0qWgrUCBHsl6_hu6wQOVV-srB","errorURL":"/auth/signin","expiresAt":1761732522022},1761732522022,1761731922022,1761731922022
+    at [3mignore-listed frames[23m {
+  query: [32m'insert into "verification" ("id", "identifier", "value", "expires_at", "created_at", "updated_at") values (?, ?, ?, ?, ?, ?) returning "id", "identifier", "value", "expires_at", "created_at", "updated_at"'[39m,
+  params: [36m[Array][39m,
+  [cause]: Error [LibsqlError]: SQLITE_UNKNOWN: SQLite error: no such table: verification
+      at [3mignore-listed frames[23m {
+    code: [32m'SQLITE_UNKNOWN'[39m,
+    rawCode: [90mundefined[39m,
+    [cause]: [Error [ResponseError]: SQLite error: no such table: verification] {
+      code: [32m'SQLITE_UNKNOWN'[39m,
+      proto: {
+        message: [32m'SQLite error: no such table: verification'[39m,
+        code: [32m'SQLITE_UNKNOWN'[39m
+      }
+    }
+  }
+}
+ POST /api/auth/sign-in/social [31m500[39m in 2.3s[2m (compile: 1538ms, render: 812ms)[22m
+[2m2025-10-29T09:58:44.947Z[0m [31mERROR[0m [1m[Better Auth]:[0m Error Error: Failed query: insert into "verification" ("id", "identifier", "value", "expires_at", "created_at", "updated_at") values (?, ?, ?, ?, ?, ?) returning "id", "identifier", "value", "expires_at", "created_at", "updated_at"
+params: z4LokCxWJ8NB1Y2wcfQFxLlX1UTM0AF6,eMBvBnbnocuQctl0SWj2WNTF8LBy7WiF,{"callbackURL":"/home","codeVerifier":"VSOpaC1wi37g5DChpQJ2l1uD2nlADh73w51OXk8HgFzC2uIWSCtpPXrqFeVOYb_A771nvGsBhJI5S8kQ_gwVKwp8PCfiXAENBuoID3LED-pVn1s7m0S7H7uy_rkfM7j-","errorURL":"/auth/signin","expiresAt":1761732524845},1761732524845,1761731924845,1761731924845
+    at [3mignore-listed frames[23m {
+  query: [32m'insert into "verification" ("id", "identifier", "value", "expires_at", "created_at", "updated_at") values (?, ?, ?, ?, ?, ?) returning "id", "identifier", "value", "expires_at", "created_at", "updated_at"'[39m,
+  params: [36m[Array][39m,
+  [cause]: Error [LibsqlError]: SQLITE_UNKNOWN: SQLite error: no such table: verification
+      at [3mignore-listed frames[23m {
+    code: [32m'SQLITE_UNKNOWN'[39m,
+    rawCode: [90mundefined[39m,
+    [cause]: [Error [ResponseError]: SQLite error: no such table: verification] {
+      code: [32m'SQLITE_UNKNOWN'[39m,
+      proto: {
+        message: [32m'SQLite error: no such table: verification'[39m,
+        code: [32m'SQLITE_UNKNOWN'[39m
+      }
+    }
+  }
+}
+# SERVER_ERROR:  Error: Failed query: insert into "verification" ("id", "identifier", "value", "expires_at", "created_at", "updated_at") values (?, ?, ?, ?, ?, ?) returning "id", "identifier", "value", "expires_at", "created_at", "updated_at"
+params: z4LokCxWJ8NB1Y2wcfQFxLlX1UTM0AF6,eMBvBnbnocuQctl0SWj2WNTF8LBy7WiF,{"callbackURL":"/home","codeVerifier":"VSOpaC1wi37g5DChpQJ2l1uD2nlADh73w51OXk8HgFzC2uIWSCtpPXrqFeVOYb_A771nvGsBhJI5S8kQ_gwVKwp8PCfiXAENBuoID3LED-pVn1s7m0S7H7uy_rkfM7j-","errorURL":"/auth/signin","expiresAt":1761732524845},1761732524845,1761731924845,1761731924845
+    at [3mignore-listed frames[23m {
+  query: [32m'insert into "verification" ("id", "identifier", "value", "expires_at", "created_at", "updated_at") values (?, ?, ?, ?, ?, ?) returning "id", "identifier", "value", "expires_at", "created_at", "updated_at"'[39m,
+  params: [36m[Array][39m,
+  [cause]: Error [LibsqlError]: SQLITE_UNKNOWN: SQLite error: no such table: verification
+      at [3mignore-listed frames[23m {
+    code: [32m'SQLITE_UNKNOWN'[39m,
+    rawCode: [90mundefined[39m,
+    [cause]: [Error [ResponseError]: SQLite error: no such table: verification] {
+      code: [32m'SQLITE_UNKNOWN'[39m,
+      proto: {
+        message: [32m'SQLite error: no such table: verification'[39m,
+        code: [32m'SQLITE_UNKNOWN'[39m
+      }
+    }
+  }
+}
+ POST /api/auth/sign-in/social [31m500[39m in 426ms[2m (compile: 46ms, render: 380ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET /auth/sign-in [32m200[39m in 33ms[2m (compile: 6ms, render: 28ms)[22m
+ [32m[1m✓[22m[39m Compiled in 71ms
+ GET /auth/sign-in [32m200[39m in 21ms[2m (compile: 2ms, render: 18ms)[22m
+ GET /auth/sign-in [32m200[39m in 18ms[2m (compile: 1940µs, render: 16ms)[22m
+ [32m[1m✓[22m[39m Compiled in 23ms
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ [31m[1m⨯[22m[39m ./packages/db/schemas/index.ts:1:1
+[1m[31mModule not found[39m[22m: Can't resolve [32m'./auth.schema'[39m
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m [33m*[39m [36mas[39m authSchema [36mfrom[39m [32m"./auth.schema"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m { authSchema }[33m;[39m
+ [90m 4 |[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./packages/db/schemas/index.ts
+    ./apps/web/src/features/auth/server.ts
+    ./apps/web/src/features/auth/lib.ts
+    ./apps/web/src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET /auth/sign-in [32m200[39m in 19ms[2m (compile: 1907µs, render: 17ms)[22m
+ [32m[1m✓[22m[39m Compiled in 31ms
+ GET /auth/sign-in [32m200[39m in 18ms[2m (compile: 2ms, render: 15ms)[22m
+ [32m[1m✓[22m[39m Compiled in 39ms
+ GET /auth/sign-in [32m200[39m in 18ms[2m (compile: 1803µs, render: 16ms)[22m
+ [32m[1m✓[22m[39m Compiled in 16ms
+ GET /auth/sign-in [32m200[39m in 22ms[2m (compile: 2ms, render: 20ms)[22m
+ [32m[1m✓[22m[39m Compiled in 59ms
+ GET /auth/sign-in [32m200[39m in 25ms[2m (compile: 2ms, render: 23ms)[22m
+ [32m[1m✓[22m[39m Compiled in 82ms
+ GET /auth/sign-in [32m200[39m in 22ms[2m (compile: 3ms, render: 20ms)[22m
+ [32m[1m✓[22m[39m Compiled in 18ms
+ GET /auth/sign-in [32m200[39m in 22ms[2m (compile: 2ms, render: 20ms)[22m
+ [32m[1m✓[22m[39m Compiled in 106ms
+ [37m[1m [22m[39m Reload env: .env.local
+ GET /auth/sign-in [32m200[39m in 90ms[2m (compile: 49ms, render: 41ms)[22m
+[dotenv@17.2.3] injecting env (2) from ../../.env.local [2m-- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com[0m
+ GET / [32m200[39m in 185ms[2m (compile: 71ms, render: 114ms)[22m
+ GET / [32m200[39m in 43ms[2m (compile: 2ms, render: 41ms)[22m
+ GET / [32m200[39m in 38ms[2m (compile: 1725µs, render: 36ms)[22m
+ GET / [32m200[39m in 36ms[2m (compile: 1670µs, render: 34ms)[22m
+ GET /auth/sign-in [32m200[39m in 17ms[2m (compile: 2ms, render: 15ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[2m2025-10-29T12:30:37.288Z[0m [31mERROR[0m [1m[Better Auth]:[0m Error Error: Failed query: insert into "verification" ("id", "identifier", "value", "expires_at", "created_at", "updated_at") values (?, ?, ?, ?, ?, ?) returning "id", "identifier", "value", "expires_at", "created_at", "updated_at"
+params: m3sh1OFDYGlaEcCulujHtv3L93oVWaEK,Lxf7sGCXP0E3pb7nAEWsKiuMyIZUrz5J,{"callbackURL":"/home","codeVerifier":"opc022UhsSjVRFyXtHY_uI9eBoRUYHp3ItsDVcw-D8gJ-4Y-75AsUGTTI02Tdd29VrTiAMD8aXyFtbnrAACvxZPn_OBPb5wM-tOU5o2AKquVrO6DJS1mfCQHzRJywIhl","errorURL":"/auth/signin","expiresAt":1761741636096},1761741636096,1761741036096,1761741036096
+    at [3mignore-listed frames[23m {
+  query: [32m'insert into "verification" ("id", "identifier", "value", "expires_at", "created_at", "updated_at") values (?, ?, ?, ?, ?, ?) returning "id", "identifier", "value", "expires_at", "created_at", "updated_at"'[39m,
+  params: [36m[Array][39m,
+  [cause]: Error [LibsqlError]: SQLITE_UNKNOWN: SQLite error: no such table: verification
+      at [3mignore-listed frames[23m {
+    code: [32m'SQLITE_UNKNOWN'[39m,
+    rawCode: [90mundefined[39m,
+    [cause]: [Error [ResponseError]: SQLite error: no such table: verification] {
+      code: [32m'SQLITE_UNKNOWN'[39m,
+      proto: {
+        message: [32m'SQLite error: no such table: verification'[39m,
+        code: [32m'SQLITE_UNKNOWN'[39m
+      }
+    }
+  }
+}
+# SERVER_ERROR:  Error: Failed query: insert into "verification" ("id", "identifier", "value", "expires_at", "created_at", "updated_at") values (?, ?, ?, ?, ?, ?) returning "id", "identifier", "value", "expires_at", "created_at", "updated_at"
+params: m3sh1OFDYGlaEcCulujHtv3L93oVWaEK,Lxf7sGCXP0E3pb7nAEWsKiuMyIZUrz5J,{"callbackURL":"/home","codeVerifier":"opc022UhsSjVRFyXtHY_uI9eBoRUYHp3ItsDVcw-D8gJ-4Y-75AsUGTTI02Tdd29VrTiAMD8aXyFtbnrAACvxZPn_OBPb5wM-tOU5o2AKquVrO6DJS1mfCQHzRJywIhl","errorURL":"/auth/signin","expiresAt":1761741636096},1761741636096,1761741036096,1761741036096
+    at [3mignore-listed frames[23m {
+  query: [32m'insert into "verification" ("id", "identifier", "value", "expires_at", "created_at", "updated_at") values (?, ?, ?, ?, ?, ?) returning "id", "identifier", "value", "expires_at", "created_at", "updated_at"'[39m,
+  params: [36m[Array][39m,
+  [cause]: Error [LibsqlError]: SQLITE_UNKNOWN: SQLite error: no such table: verification
+      at [3mignore-listed frames[23m {
+    code: [32m'SQLITE_UNKNOWN'[39m,
+    rawCode: [90mundefined[39m,
+    [cause]: [Error [ResponseError]: SQLite error: no such table: verification] {
+      code: [32m'SQLITE_UNKNOWN'[39m,
+      proto: {
+        message: [32m'SQLite error: no such table: verification'[39m,
+        code: [32m'SQLITE_UNKNOWN'[39m
+      }
+    }
+  }
+}
+ POST /api/auth/sign-in/social [31m500[39m in 2.3s[2m (compile: 280ms, render: 1970ms)[22m
+ GET /auth/sign-in [32m200[39m in 83ms[2m (compile: 2ms, render: 81ms)[22m
+ GET / [32m200[39m in 27ms[2m (compile: 2ms, render: 25ms)[22m
+ GET /auth/sign-in [32m200[39m in 39ms[2m (compile: 6ms, render: 33ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+ POST /api/auth/sign-in/social [32m200[39m in 1363ms[2m (compile: 82ms, render: 1282ms)[22m
+[dotenv@17.2.3] injecting env (0) from ../../.env.local -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+[2m2025-10-29T12:46:53.700Z[0m [33mWARN[0m [1m[Better Auth]:[0m [Drizzle Adapter] - Transactions are not supported. Executing operations sequentially.
+ GET /api/auth/callback/google?state=fMrpToqJVTroFQSuwzYUQLZg7dl7Yo3g&code=4%2F0Ab32j90iFeBoSR0ZKiSAFm3kb5ClXwAKtW6RII2SMkC_6CPDkDCSAT93Vtuo5I0996boMg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none [34m302[39m in 3.7s[2m (compile: 81ms, render: 3.6s)[22m
+ GET /home [32m200[39m in 747ms[2m (compile: 688ms, render: 60ms)[22m
+ [37m[1m [22m[39m Reload env: .env.local
+[dotenv@17.2.3] injecting env (2) from ../../.env.local [2m-- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops[0m
+ GET /home [32m200[39m in 575ms[2m (compile: 303ms, render: 272ms)[22m
+ [37m[1m [22m[39m Reload env: .env.local
+[dotenv@17.2.3] injecting env (2) from ../../.env.local [2m-- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops[0m
+ GET /home [32m200[39m in 624ms[2m (compile: 313ms, render: 312ms)[22m
+ [37m[1m [22m[39m Reload env: .env.local
+[dotenv@17.2.3] injecting env (2) from ../../.env.local [2m-- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops[0m
+ GET /home [32m200[39m in 554ms[2m (compile: 288ms, render: 266ms)[22m

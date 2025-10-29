@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@/*": ["apps/web/src/*"],
       "@db/*": ["packages/db/*"],
       "@auth/*": ["packages/auth/*"],
       "@utils/*": ["packages/utils/*"]

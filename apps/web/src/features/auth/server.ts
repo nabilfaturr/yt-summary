@@ -1,7 +1,7 @@
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { db } from "@/core/db";
-import { authSchema } from "@/core/db";
+import { db } from "@db";
+import { authSchema } from "@db";
 import { nextCookies } from "better-auth/next-js";
 
 const DEFAULT_PROMPT = "select_account";
