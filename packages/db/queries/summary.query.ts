@@ -22,7 +22,9 @@ export const updateSummary = async ({
   userId,
   transcript,
   summarize,
-}: NewSummary): Promise<Summary | undefined> => {
+}: NewSummary & { id: string; userId: string }): Promise<
+  Summary | undefined
+> => {
   const updateData: Record<string, unknown> = {};
 
   if (transcript !== undefined) updateData.transcript = transcript;
