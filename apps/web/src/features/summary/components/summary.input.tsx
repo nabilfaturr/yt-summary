@@ -8,6 +8,7 @@ import { DEFAULT_LLM_MODEL } from "@constants";
 import { sendVideoURL } from "../actions";
 import { toast } from "sonner";
 import { formSchema } from "../validation";
+import { Summary } from "@db/schemas/summary.schema";
 
 const placeholder = `Input Youtube video URL or ID here`;
 
@@ -22,9 +23,16 @@ type SummaryInputProps = {
       model: typeof DEFAULT_LLM_MODEL;
     }>
   >;
+  start: () => void;
+  setSummary: React.Dispatch<React.SetStateAction<Summary | null>>;
 };
 
-export function SummaryInput({ form, setForm }: SummaryInputProps) {
+export function SummaryInput({
+  form,
+  setForm,
+  start,
+  setSummary,
+}: SummaryInputProps) {
   const inputRef = React.useRef<HTMLInputElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -42,7 +50,16 @@ export function SummaryInput({ form, setForm }: SummaryInputProps) {
     formData.append("videoUrl", form.videoUrl);
     formData.append("model", form.model);
 
-    await sendVideoURL(formData);
+    const summary = await sendVideoURL(formData);
+
+    if (!summary) {
+      return toast.error("Failed to process the video URL", {
+        className: "mt-24",
+      });
+    }
+
+    setSummary(summary);
+    start();
   };
 
   return (

@@ -39,3 +39,18 @@ export const updateSummary = async ({
 
   return result[0];
 };
+
+export const getSummary = async ({
+  id,
+  userId,
+}: {
+  id: string;
+  userId: string;
+}): Promise<Summary | undefined> => {
+  const result = await db
+    .select()
+    .from(summary)
+    .where(and(eq(summary.id, id), eq(summary.userId, userId)));
+
+  return result[0];
+};

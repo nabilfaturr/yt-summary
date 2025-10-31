@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter, VT323 } from "next/font/google";
 import { ThemeProvider } from "@/components/shared/theme.provider";
 import "./globals.css";
 
@@ -18,10 +18,16 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const vt323 = VT323({
+  variable: "--font-vt323",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 export const metadata: Metadata = {
-  title: "Nextjs Starter",
+  title: "Reclara",
   description:
-    "A starter template for Next.js projects with authentication and UI components.",
+    "Reclara is an AI-powered tool that generates concise summaries of YouTube videos, helping you grasp key points quickly and efficiently.",
 };
 
 export default function RootLayout({
@@ -32,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${vt323.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

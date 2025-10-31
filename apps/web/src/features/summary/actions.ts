@@ -10,7 +10,6 @@ export async function sendVideoURL(
   formData: FormData
 ): Promise<Summary | false> {
   try {
-    // TODO: auth check
     const session = await getSession();
 
     if (!session) {
@@ -35,7 +34,6 @@ export async function sendVideoURL(
       return false;
     }
 
-    // TODO: send the videoUrl to the worker
     const videoId = extractVideoIdFromUrl(parsedBody.data.videoUrl);
 
     const summarized = await createSummary({
