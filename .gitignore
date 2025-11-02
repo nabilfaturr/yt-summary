@@ -37,3 +37,5 @@ apps/web/.turbo
 .turbo
 apps/web/.turbo/turbo-dev.log
 docs/
+.vscode/
+/downloads
