@@ -48,6 +48,7 @@
         "@radix-ui/react-slot": "^1.2.3",
         "@reclara/constants": "workspace:*",
         "@reclara/db": "workspace:*",
+        "@reclara/redis": "workspace:*",
         "better-auth": "^1.3.29",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",

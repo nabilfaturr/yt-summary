@@ -5,6 +5,7 @@ import { formSchema } from "./validation";
 import { getSession } from "@/features/auth";
 import { extractVideoIdFromUrl } from "./utils";
 import { Summary } from "@reclara/db/schemas/summary.schema";
+import { transcriptQueue } from "@reclara/redis";
 
 export async function sendVideoURL(
   formData: FormData
@@ -32,6 +33,7 @@ export async function sendVideoURL(
     if (!parsedBody.success) {
       console.error("Invalid video URL or model:", parsedBody.error);
       return false;
+      return false;
     }
 
     const videoId = extractVideoIdFromUrl(parsedBody.data.videoUrl);
@@ -41,6 +43,8 @@ export async function sendVideoURL(
       userId: user.id,
       videoId,
     });
+
+    await transcriptQueue.add("summary-job", summarized);
 
     return summarized;
   } catch (error) {
