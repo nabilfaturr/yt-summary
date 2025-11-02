@@ -2,15 +2,16 @@
 
 import React from "react";
 import { SummaryInput } from "@/features/summary/components/summary.input";
-import { DEFAULT_LLM_MODEL } from "@constants";
+import { DEFAULT_LLM_MODEL } from "@reclara/constants";
 import { useControlledFetch } from "../hooks/useControlledFetch";
-import { Summary } from "@db/schemas/summary.schema";
+import { Summary } from "@reclara/db/schemas/summary.schema";
+import { SummaryResult } from "./summary.result";
 
 export function SummaryPage() {
   const [summary, setSummary] = React.useState<Summary | null>(null);
   const hasStartedRef = React.useRef(false);
 
-  const { data, loading, start } = useControlledFetch<Summary>(
+  const { data, start } = useControlledFetch<Summary>(
     summary ? `/api/summary?id=${summary.id}` : undefined,
     {
       autoStop: (data) => data.state === "finished",
@@ -32,7 +33,7 @@ export function SummaryPage() {
 
   React.useEffect(() => {
     if (data) {
-      setSummary((prev) => {
+      setSummary((prev: Summary | null) => {
         if (JSON.stringify(prev) === JSON.stringify(data)) return prev;
         return data;
       });
@@ -47,7 +48,7 @@ export function SummaryPage() {
 
   return (
     <>
-      <SummaryResult summary={summary} loading={loading} />
+      <SummaryResult summary={summary} />
       <SummaryInput
         start={start}
         form={form}
@@ -55,28 +56,5 @@ export function SummaryPage() {
         setForm={setForm}
       />
     </>
-  );
-}
-
-function SummaryResult({
-  summary,
-  loading,
-}: {
-  summary: Summary | null;
-  loading: boolean;
-}) {
-  return (
-    <div className="h-full px-2 pt-24">
-      {loading && <p>Loading summary...</p>}
-      {summary ? (
-        <div>
-          <p>ID: {summary.id}</p>
-          <p>State: {summary.state}</p>
-          {summary.summarize && <p>{summary.summarize}</p>}
-        </div>
-      ) : (
-        <p>Belum ada summary</p>
-      )}
-    </div>
   );
 }

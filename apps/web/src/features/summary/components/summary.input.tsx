@@ -4,11 +4,11 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ModelMenu } from "./model.menu";
-import { DEFAULT_LLM_MODEL } from "@constants";
+import { DEFAULT_LLM_MODEL } from "@reclara/constants";
 import { sendVideoURL } from "../actions";
 import { toast } from "sonner";
 import { formSchema } from "../validation";
-import { Summary } from "@db/schemas/summary.schema";
+import { Summary } from "@reclara/db/schemas/summary.schema";
 
 const placeholder = `Input Youtube video URL or ID here`;
 
@@ -64,13 +64,13 @@ export function SummaryInput({
 
   return (
     <form
-      className="absolute bottom-0 w-full p-2 cursor-pointer"
+      className="FIXED z-10 bottom-0 cursor-pointer"
       onClick={() => {
         inputRef.current?.focus();
       }}
       onSubmit={handleSubmit}
     >
-      <div className="h-26 flex flex-col gap-2 bg-input/30 p-3 rounded-xl">
+      <div className="h-26 flex flex-col gap-2 bg-input p-3 rounded-xl dark:bg-neutral-900">
         <Input
           placeholder={placeholder}
           ref={inputRef}
@@ -80,7 +80,7 @@ export function SummaryInput({
               videoUrl: e.target.value,
             }))
           }
-          className="border-none font-mono shadow-none dark:bg-transparent dark:bg-none"
+          className="border-none font-mono shadow-none dark:bg-transparent"
         />
         <div className="flex items-center justify-end gap-2">
           <ModelMenu

@@ -12,15 +12,18 @@ type LayoutProviderProps = {
 
 export function LayoutProvider({ children, className }: LayoutProviderProps) {
   return (
-    <div className="min-h-screen max-w-2xl mx-auto border-x font-sans absolute inset-0">
-      <header className="p-2 absolute z-10 top-0 max-w-2xl w-full">
-        <div className="flex justify-between items-center p-5 bg-input/30 rounded-lg">
-          <Link href="/" className="cursor-pointer hover:underline">
+    <div className="min-h-screen max-w-2xl mx-auto">
+      <header className="FIXED top-0 z-10">
+        <div className="flex justify-between items-center p-5 bg-background/80 backdrop-blur-md border rounded-lg ">
+          <Link
+            href="/"
+            className="cursor-pointer hover:underline transition-all"
+          >
             <Heading level={2} variant="mono">
               Reclara
             </Heading>
           </Link>
-          <div className="flex justify-between items-center gap-2">
+          <div className="flex items-center gap-2">
             <Button asChild>
               <Link href={"/auth/sign-up"}>Sign Up</Link>
             </Button>
@@ -28,12 +31,10 @@ export function LayoutProvider({ children, className }: LayoutProviderProps) {
           </div>
         </div>
       </header>
-      <main
-        className={cn(`h-full flex items-center justify-center`, className)}
-      >
-        {children}
-      </main>
-      <Toaster position="top-center" className="font-sans" richColors />
+
+      <main className={cn("min-h-screen", className)}>{children}</main>
+
+      <Toaster position="top-center" richColors />
     </div>
   );
 }
