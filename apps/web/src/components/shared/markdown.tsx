@@ -5,6 +5,7 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { Warning } from "./warning";
 
 type MarkdownProps = {
   content: string;
@@ -48,7 +49,8 @@ export default function Markdown({
   }, [content, streaming, streamSpeed, streamDelay]);
 
   return (
-    <div className="prose prose-neutral max-w-none dark:prose-invert overflow-y-auto font-sans pt-10 pb-3 px-2">
+    <div className="prose prose-neutral max-w-none dark:prose-invert overflow-y-auto font-sans py-4 px-1">
+      <Warning text="Warning : Model can make mistakes, always cross check the result!" />
       <ReactMarkdown remarkPlugins={[remarkGfm]}>
         {displayedContent}
       </ReactMarkdown>

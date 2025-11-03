@@ -6,18 +6,19 @@ import { getSession } from "@/features/auth";
 import { extractVideoIdFromUrl } from "./utils";
 import { Summary } from "@reclara/db/schemas/summary.schema";
 import { transcriptQueue } from "@reclara/redis";
+import { redirect } from "next/navigation";
 
 export async function sendVideoURL(
   formData: FormData
 ): Promise<Summary | false> {
+  const session = await getSession();
+
+  if (!session) {
+    console.error("User not authenticated");
+    redirect("/auth/sign-in");
+  }
+
   try {
-    const session = await getSession();
-
-    if (!session) {
-      console.error("User not authenticated");
-      return false;
-    }
-
     const { user } = session;
 
     const videoUrl = formData.get("videoUrl") as string;
@@ -27,6 +28,8 @@ export async function sendVideoURL(
       videoUrl,
       model,
     };
+
+    console.log({ body });
 
     const parsedBody = formSchema.safeParse(body);
 

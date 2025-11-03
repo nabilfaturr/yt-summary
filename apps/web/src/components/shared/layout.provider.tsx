@@ -12,7 +12,6 @@ export function LayoutProvider({ children, className }: LayoutProviderProps) {
     <div className="min-h-screen max-w-2xl mx-auto">
       <Header />
       <main className={cn("min-h-screen", className)}>{children}</main>
-
       <Toaster position="top-center" richColors />
     </div>
   );

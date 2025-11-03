@@ -5,7 +5,7 @@ import {
 } from "./components/social-auth.icon";
 import { IconType, SupportedOauthProviders } from "./type";
 
-export const SUCCESS_CALLBACK_URL = "/home";
+export const SUCCESS_CALLBACK_URL = "/";
 export const ERROR_CALLBACK_URL = "/auth/signin";
 
 export const SUPPORTED_OAUTH_PROVIDERS = [
