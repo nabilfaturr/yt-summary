@@ -36,7 +36,6 @@ export async function sendVideoURL(
     if (!parsedBody.success) {
       console.error("Invalid video URL or model:", parsedBody.error);
       return false;
-      return false;
     }
 
     const videoId = extractVideoIdFromUrl(parsedBody.data.videoUrl);

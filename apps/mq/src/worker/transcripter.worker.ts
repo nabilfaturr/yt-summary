@@ -5,9 +5,8 @@ import {
   summaryQueue,
   type TranscriptJobData,
 } from "@reclara/redis";
-import { errorSummary, updateSummary } from "@reclara/db";
+import { updateErrorSummary, updateSummary } from "@reclara/db";
 import { cleanSubtitle, downloadWithShell } from "../utils";
-import { error } from "console";
 
 const transcriptWorker = new Worker<TranscriptJobData>(
   "transcript-queue",
@@ -42,7 +41,7 @@ const transcriptWorker = new Worker<TranscriptJobData>(
       return { cleanedText };
     } catch (error) {
       console.error(`Error processing job ${job.id}:`, error);
-      await errorSummary({
+      await updateErrorSummary({
         id: job.data.id as string,
         userId: job.data.userId,
       });
@@ -65,7 +64,7 @@ transcriptWorker.on("completed", async (job, returnvalue) => {
 
   if (summary) return await summaryQueue.add("summary-queue", summary);
 
-  await errorSummary({
+  await updateErrorSummary({
     id: job.data.id as string,
     userId: job.data.userId,
   });
@@ -74,7 +73,7 @@ transcriptWorker.on("completed", async (job, returnvalue) => {
 transcriptWorker.on("failed", async (job, err) => {
   if (!job) return;
   console.error(`❌ Job ${job?.id} failed:`, err);
-  await errorSummary({
+  await updateErrorSummary({
     id: job.data.id as string,
     userId: job.data.userId,
   });

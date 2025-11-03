@@ -1,7 +1,7 @@
 import { Worker } from "bullmq";
 import { connection } from "@reclara/redis";
 import { fetchFireworks, generatePrompt, saveCleanedSubtitle } from "@/utils";
-import { errorSummary, updateSummary } from "@reclara/db";
+import { updateErrorSummary, updateSummary } from "@reclara/db";
 
 const worker = new Worker(
   "summary-queue",
@@ -28,23 +28,34 @@ const worker = new Worker(
         max_tokens: 2000,
         temperature: 0.2,
       });
+      console.log(`[RESPONSE] `, response);
 
-      const data = response.choices[0]?.text;
-      console.log({ data });
+      const message = response.choices[0]?.message;
+      console.log(`[MESSAGE] `, message);
 
-      if (!data) {
-        throw new Error("No response from Fireworks API");
+      if (!message) {
+        throw new Error("No Message Found");
       }
 
-      
-      const content = JSON.parse(data).content;
-      console.log({ content });
+      const content = response.choices[0]?.message.content;
+      console.log(`[CONTENT] `, content);
+
+      if (!content) {
+        throw new Error("No Content Found");
+      }
+
+      const parsedContent = JSON.parse(content)?.content;
+      if (!parsedContent) {
+        throw new Error("No parsedContentFound");
+      }
+
+      console.log(`[PARSED CONTENT] `, parsedContent);
 
       console.log("=== Summary Worker Done ===");
-      return content;
+      return parsedContent;
     } catch (error) {
       console.error(`Error processing job ${job.id}:`, error);
-      await errorSummary({
+      await updateErrorSummary({
         id: job.data.id as string,
         userId: job.data.userId,
       });
@@ -68,7 +79,7 @@ worker.on("completed", async (job, result) => {
 worker.on("failed", async (job, err) => {
   if (!job) return;
   console.error(`[ERROR] Job ${job?.id} failed:`, err);
-  await errorSummary({
+  await updateErrorSummary({
     id: job.data.id as string,
     userId: job.data.userId,
   });

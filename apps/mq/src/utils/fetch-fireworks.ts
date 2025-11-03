@@ -15,7 +15,11 @@ interface FireworksParams {
 
 interface FireworksResponse {
   choices: Array<{
-    text: string;
+    index: number;
+    message: {
+      role: string;
+      content: string;
+    };
     finish_reason: string;
   }>;
   usage?: {
@@ -48,7 +52,7 @@ export async function fetchFireworks(
   }
 
   const response = await fetch(
-    "https://api.fireworks.ai/inference/v1/completions",
+    "https://api.fireworks.ai/inference/v1/chat/completions",
     {
       method: "POST",
       headers: {
@@ -58,7 +62,12 @@ export async function fetchFireworks(
       },
       body: JSON.stringify({
         model: getModelIdentifier(model),
-        prompt: prompt,
+        messages: [
+          {
+            role: "user",
+            content: prompt,
+          },
+        ],
         max_tokens: options?.max_tokens ?? 2048,
         temperature: options?.temperature ?? 0.3,
         top_p: 1,
@@ -72,6 +81,8 @@ export async function fetchFireworks(
       }),
     }
   );
+
+  console.log(`[RESPONSE] `, response);
 
   if (!response.ok) {
     const errorText = await response.text();

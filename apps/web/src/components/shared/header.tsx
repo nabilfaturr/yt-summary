@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Heading } from "./heading";
 import { ThemeToggle } from "./theme.toggle";
-import { AuthButton } from "@/features/auth/components/auth-button";
 import { getSession, SignOutButton } from "@/features/auth";
 import { Button } from "../ui/button";
 

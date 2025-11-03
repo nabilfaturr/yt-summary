@@ -55,7 +55,7 @@ export const getSummary = async ({
   return result[0];
 };
 
-export const errorSummary = async ({
+export const updateErrorSummary = async ({
   id,
   userId,
 }: {
