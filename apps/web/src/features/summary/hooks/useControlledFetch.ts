@@ -1,16 +1,18 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { fetcher } from "@/features/summary/fetcher";
+import { getErrorMessage } from "@/lib/error";
 
 type Options<T = unknown> = {
   interval?: number;
   autoStop?: (data: T) => boolean;
+  onError?: (error: string) => void;
 };
 
 export function useControlledFetch<T = unknown>(
   url?: string,
   options: Options<T> = {}
 ) {
-  const { interval = 1500, autoStop } = options;
+  const { interval = 1500, autoStop, onError } = options;
 
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
@@ -56,8 +58,17 @@ export function useControlledFetch<T = unknown>(
 
       setData(result);
     } catch (err: unknown) {
-      const error = err instanceof Error ? err.message : "Unknown error";
-      setError(error);
+      const errorMessage = getErrorMessage(err);
+      setError(errorMessage);
+      onError?.(errorMessage);
+      
+      // Stop polling on error
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
+      activeRef.current = false;
+      setActive(false);
     } finally {
       setLoading(false);
     }

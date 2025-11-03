@@ -6,6 +6,7 @@ import { DEFAULT_LLM_MODEL } from "@reclara/constants";
 import { useControlledFetch } from "../hooks/useControlledFetch";
 import { Summary } from "@reclara/db/schemas/summary.schema";
 import { SummaryResult } from "./summary.result";
+import { toast } from "sonner";
 
 export function SummaryPage() {
   const [summary, setSummary] = React.useState<Summary | null>(null);
@@ -15,7 +16,10 @@ export function SummaryPage() {
   const { data, start, stop } = useControlledFetch<Summary>(
     summary ? `/api/summary?id=${summary.id}` : undefined,
     {
-      autoStop: (data) => data.state === "finished",
+      autoStop: (data) => data.state === "finished" || data.state === "error",
+      onError: (error) => {
+        toast.error(error, { className: "mt-24" });
+      },
     }
   );
 

@@ -48,20 +48,26 @@ export function SummaryInput({
       });
     }
 
-    const formData = new FormData();
-    formData.append("videoUrl", form.videoUrl);
-    formData.append("model", form.model);
+    try {
+      const formData = new FormData();
+      formData.append("videoUrl", form.videoUrl);
+      formData.append("model", form.model);
 
-    const newSummary = await sendVideoURL(formData);
+      const newSummary = await sendVideoURL(formData);
 
-    if (!newSummary) {
-      return toast.error("Failed to process the video URL", {
+      if (!newSummary) {
+        return toast.error("Failed to process the video URL", {
+          className: "mt-24",
+        });
+      }
+
+      setSummary(newSummary);
+      onNewRequest(); // Trigger polling restart via parent
+    } catch (error) {
+      toast.error("An error occurred while processing your request", {
         className: "mt-24",
       });
     }
-
-    setSummary(newSummary);
-    onNewRequest(); // Trigger polling restart via parent
   };
 
   const isDisabled = () => {
