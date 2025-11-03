@@ -22,11 +22,13 @@ export function useControlledFetch<T = unknown>(
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const activeRef = useRef(false);
   const autoStopRef = useRef(autoStop);
+  const onErrorRef = useRef(onError);
 
-  // update autoStopRef tanpa trigger re-render
+  // update refs tanpa trigger re-render
   useEffect(() => {
     autoStopRef.current = autoStop;
-  }, [autoStop]);
+    onErrorRef.current = onError;
+  }, [autoStop, onError]);
 
   // Reset data & active state ketika URL berubah
   useEffect(() => {
@@ -60,8 +62,8 @@ export function useControlledFetch<T = unknown>(
     } catch (err: unknown) {
       const errorMessage = getErrorMessage(err);
       setError(errorMessage);
-      onError?.(errorMessage);
-      
+      onErrorRef.current?.(errorMessage);
+
       // Stop polling on error
       if (timerRef.current) {
         clearInterval(timerRef.current);

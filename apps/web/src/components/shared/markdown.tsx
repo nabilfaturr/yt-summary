@@ -21,17 +21,17 @@ export default function Markdown({
   streamDelay = 2,
 }: MarkdownProps) {
   const [displayedContent, setDisplayedContent] = useState("");
-  const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
+    // For non-streaming, set immediately in the next tick
     if (!streaming) {
-      setDisplayedContent(content);
-      setIsComplete(true);
-      return;
+      const timer = setTimeout(() => setDisplayedContent(content), 0);
+      return () => clearTimeout(timer);
     }
 
+    // Reset and start streaming
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDisplayedContent("");
-    setIsComplete(false);
     let currentIndex = 0;
 
     const interval = setInterval(() => {
@@ -40,7 +40,6 @@ export default function Markdown({
         setDisplayedContent(content.slice(0, nextIndex));
         currentIndex = nextIndex;
       } else {
-        setIsComplete(true);
         clearInterval(interval);
       }
     }, streamDelay);

@@ -63,7 +63,7 @@ export function SummaryInput({
 
       setSummary(newSummary);
       onNewRequest(); // Trigger polling restart via parent
-    } catch (error) {
+    } catch {
       toast.error("An error occurred while processing your request", {
         className: "mt-24",
       });
