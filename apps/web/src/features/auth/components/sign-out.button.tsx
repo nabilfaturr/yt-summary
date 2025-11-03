@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useAuth } from "../client";
+import { LogOut } from "lucide-react";
 
 export function SignOutButton() {
   const { signOut } = useAuth();
@@ -9,9 +10,10 @@ export function SignOutButton() {
   return (
     <Button
       type="submit"
-      className="cursor-pointer bg-red-500 hover:bg-red-400 text-white"
-      onClick={() => signOut()}
+      className="cursor-pointer"
+      onClick={() => signOut("/")}
     >
+      <LogOut />
       Sign Out
     </Button>
   );

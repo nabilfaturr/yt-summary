@@ -23,7 +23,7 @@ export function SocialAuthCard({ auth }: SocialAuthCardProps) {
 
   return (
     <Card className="shadow-none gap-10 border-none w-full max-w-lg bg-">
-      <CardHeader className="gap-1 text-left">
+      <CardHeader className="gap-1 text-left font-sans">
         <p className="text-lg text-muted-foreground">{greetings}</p>
         <h1 className="text-2xl md:text-3xl font-semibold">{title}</h1>
       </CardHeader>
