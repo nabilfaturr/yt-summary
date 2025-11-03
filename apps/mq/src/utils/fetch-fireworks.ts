@@ -52,7 +52,7 @@ export async function fetchFireworks(
   }
 
   const response = await fetch(
-    "https://api.fireworks.ai/inference/v1/chat/completions",
+    "https://api.fireworks.ai/inference/v1/completions",
     {
       method: "POST",
       headers: {
@@ -62,12 +62,7 @@ export async function fetchFireworks(
       },
       body: JSON.stringify({
         model: getModelIdentifier(model),
-        messages: [
-          {
-            role: "user",
-            content: prompt,
-          },
-        ],
+        prompt: prompt,
         max_tokens: options?.max_tokens ?? 2048,
         temperature: options?.temperature ?? 0.3,
         top_p: 1,
