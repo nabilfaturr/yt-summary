@@ -40,58 +40,35 @@ export async function downloadWithShell(
 
     console.log("[CONFIG] Output template:", outputTemplate);
 
-    // Cek subtitle availability
-    console.log("[SEARCH] Checking available subtitles...");
-    const checkSubsOutput = await withRetry(
-      () => $`yt-dlp "${url}" --list-subs`.text(),
-      2
-    );
-
-    const hasManualSubs = checkSubsOutput.includes("Available subtitles");
-    const hasAutoSubs = checkSubsOutput.includes(
-      "Available automatic captions"
-    );
-
-    console.log(`[INFO] Manual subtitles: ${hasManualSubs ? "Yes" : "No"}`);
-    console.log(
-      `[INFO] Auto-generated subtitles: ${hasAutoSubs ? "Yes" : "No"}`
-    );
-
+    // Download auto-generated subtitles
+    console.log("\n[DOWNLOAD] Attempting auto-generated subtitles...");
     const downloadedSubs = [] as string[];
     let hasDownloaded = false;
 
-    if (hasAutoSubs) {
-      console.log("\n[DOWNLOAD] Attempting auto-generated subtitles...");
-      for (const lang of subtitleLangs) {
-        if (hasDownloaded) break;
-        try {
-          console.log(`  Trying ${lang}...`);
-          await withRetry(
-            () =>
-              $`yt-dlp "${url}" --write-auto-subs --skip-download --sub-langs ${lang} --output "${outputTemplate}.%(ext)s"`.text(),
-            3
-          );
-          downloadedSubs.push(lang);
-          hasDownloaded = true;
-          console.log(`  [SUCCESS] Auto ${lang} downloaded`);
-          await delay(2000);
-        } catch (error: any) {
-          const errorMsg = error.stderr?.toString() || "";
-          if (errorMsg.includes("429")) {
-            console.warn(`  [WARNING] Rate limited for ${lang}. Skipping...`);
-          } else if (errorMsg.includes("Unable to download")) {
-            console.log(`  [WARNING] Auto ${lang} not available`);
-          } else {
-            throw error;
-          }
+    for (const lang of subtitleLangs) {
+      if (hasDownloaded) break;
+      try {
+        console.log(`  Trying ${lang}...`);
+        await withRetry(
+          () =>
+            $`yt-dlp "${url}" --write-auto-subs --skip-download --sub-langs ${lang} --output "${outputTemplate}.%(ext)s"`.text(),
+          3
+        );
+        downloadedSubs.push(lang);
+        hasDownloaded = true;
+        console.log(`  [SUCCESS] Auto ${lang} downloaded`);
+        await delay(500);
+      } catch (error: any) {
+        const errorMsg = error.stderr?.toString() || "";
+        if (errorMsg.includes("429")) {
+          console.warn(`  [WARNING] Rate limited for ${lang}. Skipping...`);
+        } else if (errorMsg.includes("Unable to download")) {
+          console.log(`  [WARNING] Auto ${lang} not available`);
+        } else {
+          throw error;
         }
       }
-    } else {
-      console.log(
-        "[WARNING] No auto-generated subtitles available for this video."
-      );
     }
-    // Check hasil
     const totalDownloaded = downloadedSubs.length;
 
     if (totalDownloaded === 0) {
