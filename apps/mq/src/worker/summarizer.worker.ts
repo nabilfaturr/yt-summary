@@ -30,21 +30,14 @@ const worker = new Worker(
       });
       console.log(`[RESPONSE] `, response);
 
-      const message = response.choices[0]?.message;
+      const message = response.choices[0]?.text;
       console.log(`[MESSAGE] `, message);
 
       if (!message) {
         throw new Error("No Message Found");
       }
 
-      const content = response.choices[0]?.message.content;
-      console.log(`[CONTENT] `, content);
-
-      if (!content) {
-        throw new Error("No Content Found");
-      }
-
-      const parsedContent = JSON.parse(content)?.content;
+      const parsedContent = JSON.parse(message).content;
       if (!parsedContent) {
         throw new Error("No parsedContentFound");
       }

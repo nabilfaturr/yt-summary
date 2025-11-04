@@ -16,10 +16,7 @@ interface FireworksParams {
 interface FireworksResponse {
   choices: Array<{
     index: number;
-    message: {
-      role: string;
-      content: string;
-    };
+    text: string;
     finish_reason: string;
   }>;
   usage?: {
