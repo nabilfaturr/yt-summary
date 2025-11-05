@@ -1,7 +1,7 @@
 export const SUPPORTED_LLM_MODELS = [
   "llama4-maverick-instruct-basic",
-  "gpt-oss-20b",
-  "qwen3-14b",
+  "gpt-oss-120b",
+  "qwen3-vl-30b-a3b-instruct"
 ] as const;
 
 export const SUPPORTED_LLM_MODELS_DETAILS: Record<
@@ -12,13 +12,13 @@ export const SUPPORTED_LLM_MODELS_DETAILS: Record<
     name: "LLama 4 Maverick",
     description: "Basic instruction-following model.",
   },
-  "qwen3-14b": {
-    name: "Qwen 3",
-    description: "14B parameter model.",
+  "gpt-oss-120b": {
+    name: "GPT-OSS 120B",
+    description: "Open-source model with 120 billion parameters.",
   },
-  "gpt-oss-20b": {
-    name: "GPT-OSS 20B",
-    description: "20B Open-source large language model.",
+  "qwen3-vl-30b-a3b-instruct": {
+    name: "Qwen-VL Instruct",
+    description: "Model with active 3B parameters for instruction tasks.",
   },
 };
 

@@ -1,19 +1,23 @@
 import env from "@reclara/env";
 import { summarySchema } from "./fireworks-respons-schema";
+import type { SUPPORTED_LLM_MODELS } from "@reclara/constants";
 
-type FireworksModel = "deepseek-v3p1-terminus" | "gpt-oss-20b" | "gpt-oss-120b";
+type FireworksModel = (typeof SUPPORTED_LLM_MODELS)[number];
 
-interface FireworksParams {
+type FireworksParams = {
   model: FireworksModel;
   prompt: string;
   max_tokens?: number;
   temperature?: number;
-}
+};
 
-interface FireworksResponse {
+type FireworksResponse = {
   choices: Array<{
     index: number;
-    text: string;
+    message: {
+      role: string;
+      content: string;
+    };
     finish_reason: string;
   }>;
   usage?: {
@@ -21,18 +25,7 @@ interface FireworksResponse {
     completion_tokens: number;
     total_tokens: number;
   };
-}
-
-function getModelIdentifier(model: FireworksModel): string {
-  const modelMap: Record<FireworksModel, string> = {
-    "deepseek-v3p1-terminus":
-      "accounts/fireworks/models/deepseek-v3p1-terminus",
-    "gpt-oss-20b": "accounts/fireworks/models/gpt-oss-20b",
-    "gpt-oss-120b": "accounts/fireworks/models/gpt-oss-120b",
-  };
-
-  return modelMap[model];
-}
+};
 
 export async function fetchFireworks(
   model: FireworksModel,
@@ -46,7 +39,7 @@ export async function fetchFireworks(
   }
 
   const response = await fetch(
-    "https://api.fireworks.ai/inference/v1/completions",
+    "https://api.fireworks.ai/inference/v1/chat/completions",
     {
       method: "POST",
       headers: {
@@ -55,9 +48,14 @@ export async function fetchFireworks(
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: getModelIdentifier(model),
-        prompt: prompt,
-        max_tokens: options?.max_tokens ?? 2048,
+        model: `accounts/fireworks/models/${model}`,
+        messages: [
+          {
+            role: "user",
+            content: prompt,
+          },
+        ],
+        max_tokens: options?.max_tokens ?? 4096,
         temperature: options?.temperature ?? 0.3,
         top_p: 1,
         top_k: 40,
