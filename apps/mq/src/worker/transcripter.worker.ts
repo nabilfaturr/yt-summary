@@ -8,7 +8,7 @@ import {
 import { updateErrorSummary, updateSummary } from "@reclara/db";
 import { cleanSubtitle, downloadWithShell } from "../utils";
 
-console.log("========== TRANSCRIPTER WORKER ==========")
+console.log("========== TRANSCRIPTER WORKER / Edit while recording ==========")
 
 const transcriptWorker = new Worker<TranscriptJobData>(
   "transcript-queue",
