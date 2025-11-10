@@ -54,7 +54,7 @@ export async function downloadWithShell(
         // Run yt-dlp with STRICT auto-subs only (no manual fallback)
         await withRetry(
           () =>
-            $`yt-dlp "${url}" --cookies /app/apps/mq/youtube.com-cookies.txt --write-auto-subs --no-write-subs --skip-download --sub-langs ${lang} --output "${outputTemplate}.%(ext)s"`.text(),
+            $`yt-dlp "${url}" --write-auto-subs --no-write-subs --skip-download --sub-langs ${lang} --output "${outputTemplate}.%(ext)s"`.text(),
           3
         );
 
